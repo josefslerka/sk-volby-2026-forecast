@@ -26,6 +26,34 @@ th{font-weight:600;color:var(--muted);font-size:12px;text-transform:uppercase;le
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){h1{font-size:23px}nav a{margin-left:0;margin-right:12px}}
 </style></head><body><div class="wrap"><header><a class="brand" href="index.html">Slovensko 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="denik.html">Deník</a></nav></header><h1>Deník</h1>
+<h2>Po 19. 10. 2026: den 3</h2>
+<h3>Co jsme udělali</h3><ul>
+<li>16:56–17:01 jsme prošli zprávy od nedělního poledne. Vyšly dva nové průzkumy pro Košice: <b>AKO pro JOJ 24</b> (Lörinc 42 %, Mudrák 19 %, Polaček 16 %) a <b>SANEP pro Kanál 1</b> (Lörinc 26 %, Kovačevičová 24 %, Polaček 22 %, Mudrák 20 %). Terén mají oba z přelomu září a října.</li>
+<li>Dohledali jsme dva starší průzkumy pro Nitru, oba na objednávku kandidátů. Focus pro Kršiaka (35,5 : 35,4) jsme už měli, Infostat pro Hattase (33 : 23) chyběl.</li>
+<li><b>Košice v2:</b> Lörinc 55 → 62 %. Vede v obou nových průzkumech, ale AKO dává odstup 24 bodů, zatímco ostatní průzkumy ze stejných dnů jen 3–7 bodů. AI proto AKO započítala jen napůl. Mudrák a Polaček klesli shodně na 15 %, Kovačevičová má 7 %.</li>
+<li><b>Nitra:</b> bez změny (Hattas 77 %). Dva průzkumy objednané soupeři se navzájem vyruší a nezávislý průzkum AKO zůstává hlavním vstupem.</li>
+<li>Košice: Markíza zjistila, že metadata fotek kandidáta Ladislava Lőrincze (jmenovec Ladislava Lörince) vedou k členovi Polačekova týmu. Lörinc chce, aby to vyšetřila policie. AI s tím na bodovém odhadu nepočítá, jen rozšířila pásmo nejistoty.</li>
+<li>Banská Bystrica: zpráva, že Molitoris odstoupí, pořád nemá potvrzení. Další článek Bystricovin je zase bez jmenovaného zdroje. Lhůta na odstoupení: středa 22. 10. 7:00.</li>
+<li>Zamčeno v 17:11. Kurzy Tipsport (všech 16 z tipsport.sk) a Niké (všech 16) čteny 17:13–17:16.</li></ul>
+<h3>Jak se pohnuly sázky</h3><p>Největší pohyb je v Košicích: po týchž průzkumech, které viděla AI, zvedly sázky Lörince ze 45 na 59 %. AI je na 62 %, rozdíl se tedy zmenšil z 10 na 3 body.
+Ve zbylých závodech se favorit posunul o víc než 1,5 bodu ve čtyřech. K AI se přiblížil Prešov (Oľha 91 → 89 %, AI 73 %). Od AI se vzdálily Trnava město (Nemčovská 62 → 60 %, AI 64 %) a Trnavský kraj (Viskupič 95 → 97 %, AI 92 %).
+V Nitranském kraji sázky přeskočily AI (Bečík 84 → 88 %, AI 86 %), rozdíl zůstal 2 body. Celkem: k nám 2 závody (Košice, Prešov), od nás 2, beze změny vzdálenosti 1.</p>
+<h3>Chyby a nápravy</h3><ul>
+<li><b>Do slepé části pronikl úsudek o kvalitě agentury.</b> Při zadání rešerše jsme uvedli, že SANEP je „nízké kvality“. Tento úsudek vznikl v sobotu při pohledu na rozdíl mezi AI a sázkami, proto jsme ho předregistrovali jen jako hypotézu k vyhodnocení po volbách (H-SANEP) a do předpovědí AI patřit neměl. První výpočet pro Košice SANEP podle toho podvážil a vyšlo 59 %.
+<i>Příčina:</i> chyba v zadání, ne v rešerši. <i>Náprava:</i> štítek jsme ze všech podkladů pro AI odstranili, první výpočet jsme zahodili (je archivovaný) a nový agent spočítal Košice znovu, se SANEP jako běžnou agenturou. Vyšlo 62 %. Odhad pro Lörince je na váze SANEP téměř necitlivý (0,5 místo 1 by dalo 63 %).</li>
+<li><b>Interní poznámky viděli i agenti.</b> Agent počítající Košice upozornil, že do kontextu automaticky dostal i náš index pracovních poznámek. Byla v něm jedna věta o SANEP a směr rozdílu AI vs. sázky v jiných závodech, žádná čísla pro Košice. <i>Náprava:</i> index jsme vyčistili, tržní a hodnoticí poznámky jsou jen v souborech, které agenti nečtou. Košice už označení ⚠ měly kvůli titulku o kurzech, teď k tomu přibyl i tento důvod.</li>
+<li><b>Přehlédnutý průzkum v Nitře.</b> V sobotu rešerše nenašla průzkum Infostatu pro Hattase (zveřejněný 9. 9.). <i>Náprava:</i> dohledán, započítán, odhad se nezměnil.</li></ul>
+<h3>Nové zdroje dne</h3><ul>
+<li>Košice: <a href="https://joj24.noviny.sk/prieskumy/1273291-kto-by-sa-stal-primatorom-kosic-vysledky-prieskumu-joj-24-priniesli-jasne-poradie-kandidatov">AKO / JOJ 24</a>,
+<a href="https://kanal1.sk/exkluzivny-prieskum-pre-kanal1-kto-by-sa-stal-primatorom-kosic-keby-sa-volby-konali-dnes-metropolu-vychodu-caka-tesny-suboj">SANEP / Kanál 1</a>,
+<a href="https://dennikn.sk/minuta/5633185/">jmenovec Lőrincz (Denník N)</a>,
+<a href="https://www.kosiceonline.sk/ladislav-lorinc-patra-po-pozadi-kandidatury-svojho-takmer-menovca">Kosiceonline</a></li>
+<li>Nitra: <a href="https://sita.sk/favoriti-nitrianskych-volieb-hattas-a-krsiak-ukazali-vysledky-prieskumov-je-medzi-nimi-vyrazny-rozdiel/">průzkumy Focus a Infostat (SITA)</a></li>
+<li>Košický kraj: <a href="https://www.kosiceonline.sk/tim-kosice-sa-podla-lenky-kovacevicovej-distancuje-od-podpory-igora-simka">Tím Košice se distancuje od podpory Šimka</a>,
+<a href="https://sita.sk/tibor-geci-sa-vzdal-kandidatury-na-kosickeho-zupana-podporil-poslanca-igora-simka/">Géci podpořil Šimka</a></li>
+<li>Prešovský kraj: <a href="https://tnlive.sk/domace/clanok/1057718-vzda-sa-samuel-migal-v-prospech-milana-mazureka-minister-poslal-vyzyvatelovi-jasny-odkaz">Migaľ neodstoupí</a></li>
+<li>Banská Bystrica: <a href="https://www.bystricoviny.sk/spravy/progresivci-ponukli-molitorisovi-post-viceprimatora-rokoval-s-nimi-poza-chrbat-svojho-timu/">další nepotvrzená zpráva o Molitorisovi</a></li>
+<li>Moratorium: <a href="https://www.teraz.sk/slovensko/volebna-kampan-sa-skonci-22oktobra/1000682-clanok.html">TASR</a></li></ul>
 <h2>Ne 18. 10. 2026: den 2</h2>
 <h3>Co jsme udělali</h3><ul>
 <li>12:45–12:48 jsme prošli zprávy od 16. 10. ve všech 16 závodech. Nový průzkum nevyšel nikde.</li>
