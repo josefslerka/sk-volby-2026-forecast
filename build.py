@@ -96,7 +96,7 @@ def figure(race, r, names):
             f'<div class="bars"><span class="b1" style="width:{a*100:.1f}%"></span><span class="b2" style="width:{m*100:.1f}%"></span>'
             f'<span class="b3" style="width:{b*100:.1f}%"></span></div>'
             f'<div class="v"><b>{pct(a)}</b> · {pct(m)} · {pct(b)}</div></div>')
-    flag = '<span class="flag" title="Agent zahlédl titulek o kurzech (bez čísel)">⚠ titulek o kurzech</span>' if r.get("contamination") == "possible" else ""
+    flag = '<span class="flag" title="Agent zahlédl titulek o kurzech nebo odkaz na interní poznámku (bez čísel), viz deník">⚠ možné ovlivnění</span>' if r.get("contamination") == "possible" else ""
     note = texts.RACE_NOTES.get(race, "")
     return (f'<figure><figcaption><b>{html.escape(NAME[race])}</b>{flag}</figcaption>{"".join(rows)}'
             f'{f"<div class=note>{note}</div>" if note else ""}</figure>')
