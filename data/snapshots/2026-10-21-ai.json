@@ -1,0 +1,209 @@
+{
+ "date": "2026-10-21",
+ "series": "ai",
+ "note": "ai blind, locked by commit; latest version per race (21. 10.: prim-ba v3 Vallo 84→81; vuc-ke skip 74, vuc-za skip 73; others unchanged)",
+ "races": {
+  "sk-banska-bystrica-primator-2026": {
+   "race_id": "prim-bb",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-banska-bystrica-primator-2026.md",
+   "dist": {
+    "Nosko": 0.63,
+    "Javorcikova": 0.345,
+    "Molitoris": 0.02,
+    "Kotleba": 0.002,
+    "Veres": 0.001,
+    "Sobota": 0.0,
+    "Someone_else": 0.002
+   },
+   "contamination_risk": "none"
+  },
+  "sk-bratislava-primator-2026": {
+   "race_id": "prim-ba",
+   "version": 3,
+   "file": "forecasts/2026-10-21-sk-bratislava-primator-2026-v3.md",
+   "dist": {
+    "Vallo": 0.81,
+    "Raz": 0.18,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "none"
+  },
+  "sk-kosice-primator-2026": {
+   "race_id": "prim-ke",
+   "version": 2,
+   "file": "forecasts/2026-10-19-sk-kosice-primator-2026-v2.md",
+   "dist": {
+    "Lorinc": 0.62,
+    "Mudrak": 0.15,
+    "Polacek": 0.15,
+    "Kovacevicova": 0.07,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-nitra-primator-2026": {
+   "race_id": "prim-nr",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-nitra-primator-2026.md",
+   "dist": {
+    "Hattas": 0.77,
+    "Krsiak": 0.2,
+    "Illes": 0.02,
+    "Uhrikova": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-presov-primator-2026": {
+   "race_id": "prim-po",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-presov-primator-2026.md",
+   "dist": {
+    "Olha": 0.73,
+    "Hagyari": 0.12,
+    "Mochnacky": 0.08,
+    "Pavlovicova": 0.05,
+    "Someone_else": 0.02
+   },
+   "contamination_risk": "none"
+  },
+  "sk-trencin-primator-2026": {
+   "race_id": "prim-tn",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-trencin-primator-2026.md",
+   "dist": {
+    "Forgac": 0.66,
+    "Micega": 0.31,
+    "Birosova": 0.02,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-trnava-primator-2026": {
+   "race_id": "prim-tt",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-trnava-primator-2026.md",
+   "dist": {
+    "Nemcovska": 0.64,
+    "Baros": 0.33,
+    "Cajkova": 0.015,
+    "Pullmann": 0.008,
+    "Obselka": 0.005,
+    "Horvathova": 0.001,
+    "Someone_else": 0.001
+   },
+   "contamination_risk": "none"
+  },
+  "sk-vuc-ba-predseda-2026": {
+   "race_id": "vuc-ba",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-ba-predseda-2026.md",
+   "dist": {
+    "Droba": 0.968,
+    "Gajarsky": 0.025,
+    "Krajcovicova": 0.004,
+    "Someone_else": 0.003
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-vuc-bb-predseda-2026": {
+   "race_id": "vuc-bb",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-bb-predseda-2026.md",
+   "dist": {
+    "Lunter": 0.96,
+    "Suja": 0.029,
+    "Kotleba": 0.005,
+    "Malatinec": 0.004,
+    "Someone_else": 0.002
+   },
+   "contamination_risk": "none"
+  },
+  "sk-vuc-ke-predseda-2026": {
+   "race_id": "vuc-ke",
+   "version": 2,
+   "file": "forecasts/2026-10-20-sk-vuc-ke-predseda-2026-v2.md",
+   "dist": {
+    "Trnka": 0.74,
+    "Porvaznik": 0.2,
+    "Simko": 0.05,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-vuc-nr-predseda-2026": {
+   "race_id": "vuc-nr",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-nr-predseda-2026.md",
+   "dist": {
+    "Becik": 0.86,
+    "Varga": 0.11,
+    "Csenger": 0.02,
+    "Culakova": 0.006,
+    "Someone_else": 0.004
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-vuc-po-predseda-2026": {
+   "race_id": "vuc-po",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-po-predseda-2026.md",
+   "dist": {
+    "Majersky": 0.84,
+    "Mazurek": 0.14,
+    "Migal": 0.01,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "none"
+  },
+  "sk-vuc-tn-predseda-2026": {
+   "race_id": "vuc-tn",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-tn-predseda-2026.md",
+   "dist": {
+    "Baska": 0.9,
+    "Svitkova": 0.09,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-vuc-tt-predseda-2026": {
+   "race_id": "vuc-tt",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-vuc-tt-predseda-2026.md",
+   "dist": {
+    "Viskupic": 0.925,
+    "Hambalek": 0.038,
+    "Berenyi": 0.022,
+    "Lancaric": 0.01,
+    "Someone_else": 0.005
+   },
+   "contamination_risk": "none"
+  },
+  "sk-vuc-za-predseda-2026": {
+   "race_id": "vuc-za",
+   "version": 2,
+   "file": "forecasts/2026-10-20-sk-vuc-za-predseda-2026-v2.md",
+   "dist": {
+    "Jurinova": 0.73,
+    "Choma": 0.23,
+    "Kapitulik": 0.03,
+    "Someone_else": 0.01
+   },
+   "contamination_risk": "possible"
+  },
+  "sk-zilina-primator-2026": {
+   "race_id": "prim-za",
+   "version": 1,
+   "file": "forecasts/2026-10-17-sk-zilina-primator-2026.md",
+   "dist": {
+    "Fiabane": 0.66,
+    "Johanes": 0.295,
+    "Cibulka": 0.03,
+    "Milo": 0.01,
+    "Someone_else": 0.005
+   },
+   "contamination_risk": "possible"
+  }
+ }
+}
