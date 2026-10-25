@@ -1,0 +1,633 @@
+{
+ "freeze": "2026-10-23",
+ "close": "2026-10-23e",
+ "status": "unofficial",
+ "races": {
+  "prim-ba": {
+   "winner": "Vallo",
+   "AI": {
+    "p_win": 0.81,
+    "brier": 0.0686,
+    "log": 0.2107,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9073,
+    "brier": 0.0171,
+    "log": 0.0973,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.8844,
+    "brier": 0.0265,
+    "log": 0.1228,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9154,
+    "brier": 0.0143,
+    "log": 0.0884,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.8915,
+    "brier": 0.0234,
+    "log": 0.1148,
+    "fav_hit": true
+   }
+  },
+  "prim-bb": {
+   "winner": "Nosko",
+   "AI": {
+    "p_win": 0.63,
+    "brier": 0.2563,
+    "log": 0.462,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.471,
+    "brier": 0.5323,
+    "log": 0.753,
+    "fav_hit": false
+   },
+   "Blend": {
+    "p_win": 0.5218,
+    "brier": 0.4336,
+    "log": 0.6504,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.471,
+    "brier": 0.5323,
+    "log": 0.753,
+    "fav_hit": false
+   },
+   "Blend close": {
+    "p_win": 0.5218,
+    "brier": 0.4336,
+    "log": 0.6504,
+    "fav_hit": true
+   }
+  },
+  "prim-ke": {
+   "winner": "Lorinc",
+   "AI": {
+    "p_win": 0.62,
+    "brier": 0.1944,
+    "log": 0.478,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.6468,
+    "brier": 0.1942,
+    "log": 0.4358,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.6479,
+    "brier": 0.1815,
+    "log": 0.4341,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.6466,
+    "brier": 0.1965,
+    "log": 0.436,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.6487,
+    "brier": 0.1819,
+    "log": 0.4328,
+    "fav_hit": true
+   }
+  },
+  "prim-nr": {
+   "winner": "Hattas",
+   "AI": {
+    "p_win": 0.77,
+    "brier": 0.0934,
+    "log": 0.2614,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.8218,
+    "brier": 0.0519,
+    "log": 0.1963,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.8088,
+    "brier": 0.0615,
+    "log": 0.2122,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.8175,
+    "brier": 0.0575,
+    "log": 0.2015,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.8049,
+    "brier": 0.0665,
+    "log": 0.217,
+    "fav_hit": true
+   }
+  },
+  "prim-po": {
+   "winner": "Olha",
+   "AI": {
+    "p_win": 0.73,
+    "brier": 0.0966,
+    "log": 0.3147,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9014,
+    "brier": 0.0141,
+    "log": 0.1038,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.8684,
+    "brier": 0.0247,
+    "log": 0.1411,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9014,
+    "brier": 0.0141,
+    "log": 0.1038,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.8684,
+    "brier": 0.0247,
+    "log": 0.1411,
+    "fav_hit": true
+   }
+  },
+  "prim-tn": {
+   "winner": "Forgac",
+   "AI": {
+    "p_win": 0.66,
+    "brier": 0.2122,
+    "log": 0.4155,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.8886,
+    "brier": 0.0219,
+    "log": 0.1181,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.8383,
+    "brier": 0.0469,
+    "log": 0.1763,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.889,
+    "brier": 0.022,
+    "log": 0.1176,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.8387,
+    "brier": 0.0471,
+    "log": 0.176,
+    "fav_hit": true
+   }
+  },
+  "prim-tt": {
+   "winner": "Nemcovska",
+   "AI": {
+    "p_win": 0.64,
+    "brier": 0.2388,
+    "log": 0.4463,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.6453,
+    "brier": 0.2362,
+    "log": 0.438,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.6446,
+    "brier": 0.2366,
+    "log": 0.4391,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.6453,
+    "brier": 0.2362,
+    "log": 0.438,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.6446,
+    "brier": 0.2366,
+    "log": 0.4391,
+    "fav_hit": true
+   }
+  },
+  "prim-za": {
+   "winner": "Fiabane",
+   "AI": {
+    "p_win": 0.66,
+    "brier": 0.2036,
+    "log": 0.4155,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.7249,
+    "brier": 0.1162,
+    "log": 0.3218,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.7112,
+    "brier": 0.1345,
+    "log": 0.3408,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.727,
+    "brier": 0.1157,
+    "log": 0.3188,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.7122,
+    "brier": 0.1346,
+    "log": 0.3394,
+    "fav_hit": true
+   }
+  },
+  "vuc-ba": {
+   "winner": "Droba",
+   "AI": {
+    "p_win": 0.968,
+    "brier": 0.0017,
+    "log": 0.0325,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9829,
+    "brier": 0.0004,
+    "log": 0.0172,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.9846,
+    "brier": 0.0003,
+    "log": 0.0155,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9829,
+    "brier": 0.0004,
+    "log": 0.0172,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.9846,
+    "brier": 0.0003,
+    "log": 0.0155,
+    "fav_hit": true
+   }
+  },
+  "vuc-bb": {
+   "winner": "Lunter",
+   "AI": {
+    "p_win": 0.96,
+    "brier": 0.0025,
+    "log": 0.0408,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9845,
+    "brier": 0.0004,
+    "log": 0.0156,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.9798,
+    "brier": 0.0007,
+    "log": 0.0204,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9845,
+    "brier": 0.0004,
+    "log": 0.0156,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.9798,
+    "brier": 0.0007,
+    "log": 0.0204,
+    "fav_hit": true
+   }
+  },
+  "vuc-ke": {
+   "winner": "Trnka",
+   "AI": {
+    "p_win": 0.74,
+    "brier": 0.1102,
+    "log": 0.3011,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.6404,
+    "brier": 0.2168,
+    "log": 0.4457,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.675,
+    "brier": 0.1765,
+    "log": 0.393,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.6404,
+    "brier": 0.2168,
+    "log": 0.4457,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.675,
+    "brier": 0.1765,
+    "log": 0.393,
+    "fav_hit": true
+   }
+  },
+  "vuc-nr": {
+   "winner": "Becik",
+   "AI": {
+    "p_win": 0.86,
+    "brier": 0.0322,
+    "log": 0.1508,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9388,
+    "brier": 0.0064,
+    "log": 0.0632,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.9216,
+    "brier": 0.0104,
+    "log": 0.0816,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9388,
+    "brier": 0.0064,
+    "log": 0.0632,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.9216,
+    "brier": 0.0104,
+    "log": 0.0816,
+    "fav_hit": true
+   }
+  },
+  "vuc-po": {
+   "winner": "Majersky",
+   "AI": {
+    "p_win": 0.84,
+    "brier": 0.0454,
+    "log": 0.1744,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.8934,
+    "brier": 0.0178,
+    "log": 0.1128,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.881,
+    "brier": 0.0232,
+    "log": 0.1267,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9195,
+    "brier": 0.0102,
+    "log": 0.0839,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.902,
+    "brier": 0.0158,
+    "log": 0.1032,
+    "fav_hit": true
+   }
+  },
+  "vuc-tn": {
+   "winner": "Baska",
+   "AI": {
+    "p_win": 0.9,
+    "brier": 0.0182,
+    "log": 0.1054,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9082,
+    "brier": 0.0161,
+    "log": 0.0963,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.906,
+    "brier": 0.0166,
+    "log": 0.0987,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9082,
+    "brier": 0.0161,
+    "log": 0.0963,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.906,
+    "brier": 0.0166,
+    "log": 0.0987,
+    "fav_hit": true
+   }
+  },
+  "vuc-tt": {
+   "winner": "Viskupic",
+   "AI": {
+    "p_win": 0.925,
+    "brier": 0.0077,
+    "log": 0.078,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.9836,
+    "brier": 0.0004,
+    "log": 0.0165,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.9741,
+    "brier": 0.001,
+    "log": 0.0262,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.9836,
+    "brier": 0.0004,
+    "log": 0.0165,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.9741,
+    "brier": 0.001,
+    "log": 0.0262,
+    "fav_hit": true
+   }
+  },
+  "vuc-za": {
+   "winner": "Jurinova",
+   "AI": {
+    "p_win": 0.73,
+    "brier": 0.1268,
+    "log": 0.3147,
+    "fav_hit": true
+   },
+   "Sazky": {
+    "p_win": 0.8418,
+    "brier": 0.0375,
+    "log": 0.1722,
+    "fav_hit": true
+   },
+   "Blend": {
+    "p_win": 0.8201,
+    "brier": 0.0506,
+    "log": 0.1983,
+    "fav_hit": true
+   },
+   "Sazky close": {
+    "p_win": 0.8418,
+    "brier": 0.0375,
+    "log": 0.1722,
+    "fav_hit": true
+   },
+   "Blend close": {
+    "p_win": 0.8201,
+    "brier": 0.0506,
+    "log": 0.1983,
+    "fav_hit": true
+   }
+  }
+ },
+ "summary": {
+  "all": {
+   "AI": {
+    "n": 16,
+    "brier": 0.1068,
+    "log": 0.2626,
+    "fav_hits": 16
+   },
+   "Sazky": {
+    "n": 16,
+    "brier": 0.0925,
+    "log": 0.2127,
+    "fav_hits": 15
+   },
+   "Blend": {
+    "n": 16,
+    "brier": 0.0891,
+    "log": 0.2173,
+    "fav_hits": 16
+   },
+   "Sazky close": {
+    "n": 16,
+    "brier": 0.0923,
+    "log": 0.2105,
+    "fav_hits": 15
+   },
+   "Blend close": {
+    "n": 16,
+    "brier": 0.0888,
+    "log": 0.2155,
+    "fav_hits": 16
+   }
+  },
+  "vuc": {
+   "AI": {
+    "n": 8,
+    "brier": 0.0431,
+    "log": 0.1497,
+    "fav_hits": 8
+   },
+   "Sazky": {
+    "n": 8,
+    "brier": 0.037,
+    "log": 0.1174,
+    "fav_hits": 8
+   },
+   "Blend": {
+    "n": 8,
+    "brier": 0.0349,
+    "log": 0.1201,
+    "fav_hits": 8
+   },
+   "Sazky close": {
+    "n": 8,
+    "brier": 0.036,
+    "log": 0.1138,
+    "fav_hits": 8
+   },
+   "Blend close": {
+    "n": 8,
+    "brier": 0.034,
+    "log": 0.1171,
+    "fav_hits": 8
+   }
+  },
+  "prim": {
+   "AI": {
+    "n": 8,
+    "brier": 0.1705,
+    "log": 0.3755,
+    "fav_hits": 8
+   },
+   "Sazky": {
+    "n": 8,
+    "brier": 0.148,
+    "log": 0.308,
+    "fav_hits": 7
+   },
+   "Blend": {
+    "n": 8,
+    "brier": 0.1432,
+    "log": 0.3146,
+    "fav_hits": 8
+   },
+   "Sazky close": {
+    "n": 8,
+    "brier": 0.1486,
+    "log": 0.3071,
+    "fav_hits": 7
+   },
+   "Blend close": {
+    "n": 8,
+    "brier": 0.1436,
+    "log": 0.3138,
+    "fav_hits": 8
+   }
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "status": "unofficial",
+ "read_at": "2026-10-25 07:26–07:31 CET (date + commit f786c36; po konci letního času)",
+ "source": "aktuality.sk souhrn yLt1sOo (data ŠÚ SR, title 'kompletné') + live blog CzNFm9c (TASR: 01:18 všichni úřadující župani; 05:00 KE Lörinc, TT Nemčovská, TN Forgáč; 02:06 Nosko; 01:37 Oľha; 01:36 Fiabáne). Oficiální ŠÚ SR volby.statistics.sk ráno nedostupné (timeout) — ověřit, ŠVK: výsledky kolem oběda 25. 10.",
+ "winners": {
+  "vuc-ba": "Droba", "vuc-bb": "Lunter", "vuc-ke": "Trnka", "vuc-nr": "Becik",
+  "vuc-po": "Majersky", "vuc-tn": "Baska", "vuc-tt": "Viskupic", "vuc-za": "Jurinova",
+  "prim-ba": "Vallo", "prim-bb": "Nosko", "prim-ke": "Lorinc", "prim-nr": "Hattas",
+  "prim-po": "Olha", "prim-tn": "Forgac", "prim-tt": "Nemcovska", "prim-za": "Fiabane"
+ },
+ "shares_pct": {
+  "vuc-ba": {"Droba": 71.0, "Gajarsky": 11.5, "Krajcovicova": 9.6, "Staruch": 4.6},
+  "vuc-bb": {"Lunter": 64.8, "Suja": 15.0, "Kotleba": 9.1, "Malatinec": 5.3},
+  "vuc-ke": {"Trnka": 32.0, "Porvaznik": 30.7, "Simko": 24.2, "Sorocinova": 9.8},
+  "vuc-nr": {"Becik": 50.5, "Varga": 28.9, "Csenger": 10.4},
+  "vuc-po": {"Majersky": 48.8, "Mazurek": 35.2, "Migal": 6.1},
+  "vuc-tn": {"Baska": 57.4, "Svitkova": 39.0},
+  "vuc-tt": {"Viskupic": 54.0, "Berenyi": 20.9, "Hambalek": 11.7, "Lancaric": 7.2},
+  "vuc-za": {"Jurinova": 52.1, "Choma": 25.8, "Kapitulik": 12.7},
+  "prim-ba": {"Vallo": 64.4, "Raz": 32.3},
+  "prim-ke": {"Lorinc": 39.9, "Polacek": 21.5, "Mudrak": 18.7, "Kovacevicova": 12.4},
+  "prim-bb": {"Nosko": 46.8}, "prim-nr": {"Hattas": 50.7}, "prim-po": {"Olha": 40.7},
+  "prim-tn": {"Forgac": 69.2}, "prim-tt": {"Nemcovska": 60.5}, "prim-za": {"Fiabane": 41.2}
+ },
+ "note": "Města mimo BA/KE: aktuality widget ukazuje jen vítěze (ostatní 0,0 = chyba zobrazení) → doplnit z ŠÚ SR. Hodnocení = multi-outcome Brier proti vítězi, k tomu stačí vítěz."
+}

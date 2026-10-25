@@ -4,7 +4,7 @@ usage: python3 scripts/sk2026/build.py <ai-date> <market-date>
 Public series only: AI, Sázky, AI + sázky. Internal series (extremized AI, incumbent baseline)
 and paper/real bets are never written to the site.
 """
-import csv, html, json, shutil, sys, unicodedata
+import csv, html, json, re, shutil, sys, unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -83,8 +83,9 @@ def pct(p):
     return "<1" if 0 < p < 0.005 else f"{p*100:.0f}"
 
 
-def figure(race, r, names):
+def figure(race, r, names, sc=None):
     ai, mk, bl = r["ai"], r["market"] or {}, r["blend"]
+    win = sc["winner"] if sc else None
     keys = sorted(ai, key=lambda k: -(ai.get(k, 0) + mk.get(k, 0)))
     keys = [k for k in keys if k != "Someone_else" and (ai.get(k, 0) >= 0.015 or mk.get(k, 0) >= 0.015)][:4]
     rows = []
@@ -92,14 +93,46 @@ def figure(race, r, names):
         disp, sur, inc = names.get(race, {}).get(k, (k, k, False))
         a, m, b = ai.get(k, 0), mk.get(k, 0), bl.get(k, 0)
         rows.append(
-            f'<div class="row"><div class="n" title="{html.escape(disp)}">{html.escape(sur)}{" ★" if inc else ""}</div>'
+            f'<div class="row"><div class="n" title="{html.escape(disp)}">{"✓ " if k == win else ""}{html.escape(sur)}{" ★" if inc else ""}</div>'
             f'<div class="bars"><span class="b1" style="width:{a*100:.1f}%"></span><span class="b2" style="width:{m*100:.1f}%"></span>'
             f'<span class="b3" style="width:{b*100:.1f}%"></span></div>'
             f'<div class="v"><b>{pct(a)}</b> · {pct(m)} · {pct(b)}</div></div>')
     flag = '<span class="flag" title="Agent zahlédl titulek o kurzech nebo odkaz na interní poznámku (bez čísel), viz deník">⚠ možné ovlivnění</span>' if r.get("contamination") == "possible" else ""
     note = texts.RACE_NOTES.get(race, "")
+    if sc:
+        wd = names.get(race, {}).get(win, (win, win, False))[1]
+        flag = f'<span class="flag" style="color:var(--muted)">vyhrál(a) {html.escape(wd)}</span>'
+        note = (f'Brier: AI {sc["AI"]["brier"]:.3f} · Sázky {sc["Sazky"]["brier"]:.3f} · AI + sázky {sc["Blend"]["brier"]:.3f}'.replace(".", ",")
+                + (f"<br>{note}" if note else ""))
     return (f'<figure><figcaption><b>{html.escape(NAME[race])}</b>{flag}</figcaption>{"".join(rows)}'
             f'{f"<div class=note>{note}</div>" if note else ""}</figure>')
+
+
+PUB = [("Blend", "AI + sázky"), ("Sazky", "Sázky"), ("AI", "AI (bez kurzů)")]
+
+
+def score_section(s, names):
+    """Public series only (AI, Sázky, AI + sázky); internal series stay out of the site."""
+    rows = []
+    for key, label in sorted(PUB, key=lambda x: s["summary"]["all"][x[0]]["brier"]):
+        a, v, p = (s["summary"][g][key] for g in ("all", "vuc", "prim"))
+        rows.append(f"<tr><td><b>{label}</b></td><td class=num><b>{a['brier']:.3f}</b></td><td class=num>{v['brier']:.3f}</td>"
+                    f"<td class=num>{p['brier']:.3f}</td><td class=num>{a['log']:.3f}</td><td class=num>{a['fav_hits']}/{a['n']}</td></tr>")
+    per = []
+    for a_, an, b_, bn in RACES:
+        for r in (a_, b_):
+            x = s["races"][r]
+            wd = names.get(r, {}).get(x["winner"], (x["winner"], x["winner"], False))[1]
+            best = min((x[k]["brier"], k) for k, _ in PUB)[1]
+            cells = "".join(f'<td class=num>{"<b>" if k == best else ""}{x[k]["p_win"]*100:.0f} % · {x[k]["brier"]:.3f}{"</b>" if k == best else ""}</td>'
+                            for k in ("AI", "Sazky", "Blend"))
+            per.append(f"<tr><td>{html.escape(NAME[r])}</td><td>{html.escape(wd)}</td>{cells}</tr>")
+    out = (f'<h2 id="skore">Skóre</h2><p class="muted" style="font-size:14px">Brierovo skóre proti vítězi, součet přes všechny kandidáty '
+            f'(0 = dokonalé, nižší je lepší), průměr za závody. {texts.SCORE_NOTE}</p>'
+            f'<div class=scroll><table><tr><th>Série</th><th>Všech 16</th><th>Kraje (8)</th><th>Města (8)</th><th>Log skóre</th><th>Favorit vyhrál</th></tr>{"".join(rows)}</table></div>'
+            f'<h3 style="margin-top:20px">Po závodech</h3><p class="muted" style="font-size:14px">Pravděpodobnost, kterou série dala skutečnému vítězi, a Brierovo skóre; tučně nejlepší ze tří.</p>'
+            f'<div class=scroll><table><tr><th>Závod</th><th>Vítěz</th><th>AI</th><th>Sázky</th><th>AI + sázky</th></tr>{"".join(per)}</table></div>')
+    return re.sub(r"(\d)\.(\d{3})", r"\1,\2", out)
 
 
 def main():
@@ -122,9 +155,20 @@ def main():
 
     key = ('<p class="key muted" style="font-size:14px;margin:6px 0 0"><i class="b1"></i>AI (bez kurzů)'
            '<i class="b2"></i>Sázky<i class="b3"></i>AI + sázky · čísla v pořadí AI · Sázky · AI + sázky, v % · ★ úřadující</p>')
-    vuc = "".join(figure(a, races[a], names) for a, _, _, _ in RACES)
-    prim = "".join(figure(b, races[b], names) for _, _, b, _ in RACES)
-    body = (f"<h1>{texts.TITLE}</h1><p class=lead>{texts.LEAD}</p>{texts.CHANGES_BOX}"
+    sp = ROOT / "data/sk-2026/scores.json"
+    scores = json.loads(sp.read_text()) if sp.exists() else None
+    scr = scores["races"] if scores else {}
+    score_html = score_section(scores, names) if scores else ""
+    if scores:
+        keep = ("AI", "Sazky", "Blend", "Sazky close", "Blend close")
+        pub_s = {"freeze": scores["freeze"], "close": scores["close"], "status": scores["status"],
+                 "races": {r: {k: v for k, v in x.items() if k == "winner" or k in keep} for r, x in scores["races"].items()},
+                 "summary": {g: {k: v for k, v in x.items() if k in keep} for g, x in scores["summary"].items()}}
+        (OUT / "data/scores.json").write_text(json.dumps(pub_s, ensure_ascii=False, indent=1))
+        shutil.copy(ROOT / "data/sk-2026/results.json", OUT / "data/results.json")
+    vuc = "".join(figure(a, races[a], names, scr.get(a)) for a, _, _, _ in RACES)
+    prim = "".join(figure(b, races[b], names, scr.get(b)) for _, _, b, _ in RACES)
+    body = (f"<h1>{texts.TITLE}</h1><p class=lead>{texts.LEAD}</p>{texts.CHANGES_BOX}{score_html}"
             f"<h2>Předsedové krajů (VÚC)</h2>{key}<div class=sm>{vuc}</div>"
             f"<h2>Primátoři krajských měst</h2>{key}<div class=sm>{prim}</div>{texts.ABOUT}")
     (OUT / "index.html").write_text(page(texts.TITLE, body, texts.LEAD))
