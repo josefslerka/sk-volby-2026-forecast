@@ -1,0 +1,34 @@
+race,agency,sponsor,sponsor_type,field,published,n,base,undecided,shares
+vuc-ba,SANEP,Kanal1,media,2026-09-28..10-04,2026-10-13,1050,decided,,Droba:50.5;Gajarsky:27.6;Krajcovicova:7.4;Staruch:7.1
+vuc-ba,AKO?,JOJ 24,media,?,2026-10-21,,decided,,Droba:67.3;Krajcovicova:9.9;Staruch:8.6;Gajarsky:6.2
+vuc-tt,AKO,JOJ 24,media,2026-09-10..09-17,2026-10-12,,decided,,Viskupic:51.8;Berenyi:18.1;Lancaric:11.7;Hambalek:9.6
+vuc-tn,AKO,JOJ 24,media,2026-09-10..09-16,2026-10-05,,decided,,Baska:57.5;Svitkova:38.6
+vuc-nr,AKO,JOJ 24,media,?,2026-10-07,,decided,,Becik:45.5;Varga:25.5;Csenger:10.1
+vuc-za,AKO,JOJ 24,media,2026-09-10..09-16,2026-09-28,,decided,,Jurinova:48.5;Choma:17.3;Kapitulik:11.8
+vuc-za,SANEP,TA3,media,?,2026-09-17,,decided,,Jurinova:31.1;Choma:29.3;Kapitulik:21.1
+vuc-za,SANEP,Kanal1,media,2026-09-28..10-01,2026-10-06,1050,decided,,Jurinova:35.4;Choma:31.2;Kapitulik:21.3
+vuc-bb,AKO,JOJ 24,media,2026-09-10..09-16,2026-09-30,,decided,,Lunter:63.2;Suja:16.8;Kotleba:8.6;Malatinec:8.5
+vuc-po,AKO,JOJ 24,media,2026-09-10..09-21,2026-10-15,,decided,,Majersky:44.8;Mazurek:28.8;Migal:6.2
+vuc-po,AKO,JOJ 24,media,2026-10-09..10-13,2026-10-14,250,decided,,Majersky:49.2;Mazurek:32.4;Migal:7.8
+vuc-ke,SANEP,Kanal1,media,2026-09-28..10-04,2026-10-21,900,decided,,Trnka:38.8;Porvaznik:34.6;Simko:16.7;Sorocinova:6.4
+vuc-ke,SANEP,TA3,media,2026-10-13..10-18,2026-10-20,950,decided,,Trnka:38.3;Porvaznik:32.2;Simko:19.4;Sorocinova:7.7
+vuc-ke,AKO,JOJ 24,media,?,2026-10-19,,decided,,Trnka:42.4;Porvaznik:25.7;Simko:19.7;Sorocinova:9.0
+prim-ba,Ixactly,Markiza,media,2026-09-29..10-05,2026-10-13,800,all,13.8,Vallo:47.3;Raz:32.7
+prim-ba,SANEP,Kanal1,media,2026-09-28..10-04,2026-10-13,1000,decided,,Vallo:43.2;Raz:40.6
+prim-ba,AKO,JOJ 24,media,2026-10-02..10-05,2026-10-20,500,decided,,Vallo:49.3;Raz:42.3
+prim-ke,KEE,?,unknown,2026-09-07..09-14,2026-09-17,754,all,9.55,Lorinc:23.21;Kovacevicova:20.69;Polacek:19.36;Mudrak:18.44
+prim-ke,Focus,Polacek,candidate,2026-09-14..09-21,2026-10-08,611,all,16.4,Polacek:21.9;Lorinc:20.3;Mudrak:13.4;Kovacevicova:10.0
+prim-ke,Focus,Mudrak,candidate,2026-09-24..10-07,2026-10-09,517,decided,,Lorinc:29.2;Mudrak:21.3;Polacek:20.9;Kovacevicova:15.1
+prim-ke,Ixactly,Markiza,media,?,2026-10-12,500,all,27.1,Lorinc:18.3;Mudrak:17.0;Polacek:16.5;Kovacevicova:9.0
+prim-ke,Ipsos,Radio Kosice,media,2026-10-02..10-06,2026-10-16,309,decided,,Lorinc:29.2;Mudrak:22.2;Polacek:21.5;Kovacevicova:19.5
+prim-ke,AKO,JOJ 24,media,2026-09-29..10-01,2026-10-18,500,decided,,Lorinc:42.3;Mudrak:18.5;Polacek:15.8;Kovacevicova:14.0
+prim-ke,SANEP,Kanal1,media,2026-09-28..10-04,2026-10-19,700,decided,,Lorinc:26.2;Kovacevicova:23.7;Polacek:21.5;Mudrak:19.7
+prim-ke,SANEP,TA3,media,2026-10-13..10-18,2026-10-20,650,decided,,Lorinc:27.5;Polacek:21.2;Kovacevicova:20.8;Mudrak:18.1
+prim-bb,Focus,Javorcikova,candidate,2026-08,2026-08-14,502,decided,,Nosko:38.3;Javorcikova:36.7;Molitoris:13
+prim-bb,AKO,BBonline + BB FM,media,2026-09-25..09-29,2026-10-04,500,decided,,Nosko:38.7;Javorcikova:35.5;Molitoris:12.9
+prim-bb,SANEP,TA3,media,2026-10-09..10-14,2026-10-16,600,decided,,Nosko:40.9;Javorcikova:34.1;Molitoris:18.6
+prim-nr,Infostat,Hattas,candidate,2026 leto,2026-09-09,400,all,21.8,Hattas:33;Krsiak:23.1
+prim-nr,Focus,Krsiak,candidate,?,2026-09-09,505,all,15.1,Krsiak:35.5;Hattas:35.4
+prim-nr,AKO,Nitricka,media,2026-09-22..09-24,2026-10-09,400,decided,,Hattas:55;Krsiak:32.5
+prim-tt,TU Trnava,MTT,media,2026-09-21..10-08,2026-10-13,1111,decided,,Baros:32.4;Nemcovska:31.9
+prim-po,NMS,Olha,candidate,2026-10-12..10-16,2026-10-20,510,decided,,Olha:46;Hagyari:30;Mochnacky:11

@@ -135,6 +135,39 @@ def score_section(s, names):
     return re.sub(r"(\d)\.(\d{3})", r"\1,\2", out)
 
 
+MEDIA = {"Kanal1": "Kanál 1", "Markiza": "Markíza", "Radio Kosice": "Rádio Košice", "Nitricka": "Nitrická",
+         "MTT": "Mestská televízia Trnava", "?": "zadavatel neuveden"}
+
+
+def poll_section(names):
+    """Tabulka průzkumů vs. výsledek (z poll_errors.json) pro deník."""
+    pe = json.loads((ROOT / "data/sk-2026/poll_errors.json").read_text())
+    order = [r for a_, _, b_, _ in RACES for r in (a_, b_)]
+    rows = []
+    for x in sorted(pe["polls"], key=lambda x: (order.index(x["race"]), x["published"])):
+        r = x["race"]
+        sp = x["sponsor"]
+        if x["sponsor_type"] == "candidate":
+            sp = names.get(r, {}).get(sp, (sp, sp, False))[1] + " (kandidát)"
+        else:
+            sp = MEDIA.get(sp, sp)
+        d = x["published"][8:10].lstrip("0") + ". " + x["published"][5:7].lstrip("0") + "."
+        if "margin_err" in x:
+            mg = f'<td class=num>{x["margin_poll"]:+.1f}</td><td class=num>{x["margin_act"]:+.1f}</td><td class=num><b>{x["margin_err"]:+.1f}</b></td>'
+        else:
+            mg = '<td class=num>–</td><td class=num>–</td><td class=num>–</td>'
+        rows.append(f'<tr><td>{html.escape(NAME[r])}</td><td>{html.escape(x["agency"] + (" (agentura neuvedena, odvozeno ze série)" if x.get("agency_raw", "").endswith("?") else ""))} · {html.escape(sp)}</td><td class=num>{d}</td>'
+                    f'<td class=num>{x["winner_poll"]:.1f} / {x["winner_act"]:.1f}</td>{mg}</tr>')
+    out = ('<h3>Všechny průzkumy</h3><p class="muted" style="font-size:14px">Náskok = podíl skutečného vítěze minus podíl skutečně druhého, '
+           'z rozhodnutých voličů (průzkumy s nerozhodnutými v součtu přepočteny). Záporná chyba = průzkum náskok vítěze podcenil. '
+           'U měst bez úplných oficiálních výsledků jen podíl vítěze. Data: <a href="data/polls.csv">polls.csv</a>, '
+           '<a href="data/poll_errors.json">poll_errors.json</a>.</p>'
+           '<div class=scroll><table><tr><th>Závod</th><th>Agentura · zadavatel</th><th>Zveřejněno</th><th>Vítěz % průzkum / výsledek</th>'
+           f'<th>Náskok průzkum</th><th>Náskok výsledek</th><th>Chyba</th></tr>{"".join(rows)}</table></div>')
+    out = re.sub(r">-(\d)", r">−\1", re.sub(r">(<b>)?-(\d)", r">\1−\2", out))
+    return re.sub(r"(\d)\.(\d)", r"\1,\2", out)
+
+
 def main():
     ai_date, mk_date = sys.argv[1], sys.argv[2]
     names = load_names()
@@ -173,7 +206,16 @@ def main():
             f"<h2>Primátoři krajských měst</h2>{key}<div class=sm>{prim}</div>{texts.ABOUT}")
     (OUT / "index.html").write_text(page(texts.TITLE, body, texts.LEAD))
     (OUT / "pravidla.html").write_text(page("Pravidla · Slovensko 2026", texts.RULES, "Pravidla vyhodnocení"))
-    (OUT / "denik.html").write_text(page("Deník · Slovensko 2026", texts.JOURNAL, "Deník experimentu"))
+    pe = ROOT / "data/sk-2026/poll_errors.json"
+    journal = texts.JOURNAL
+    if pe.exists():
+        journal = journal.replace("<!--POLL_TABLE-->", poll_section(names))
+        pj = json.loads(pe.read_text())
+        (OUT / "data/poll_errors.json").write_text(json.dumps(
+            {k: v for k, v in pj.items() if k in ("results_status", "polls", "summary_media_latest", "pairs_sanep_ako")},
+            ensure_ascii=False, indent=1))
+        shutil.copy(ROOT / "data/sk-2026/polls.csv", OUT / "data/polls.csv")
+    (OUT / "denik.html").write_text(page("Deník · Slovensko 2026", journal, "Deník experimentu"))
     (OUT / "data/latest.json").write_text(json.dumps({"ai": f"snapshots/{ai_date}-ai.json", "market": f"snapshots/{mk_date}-market.json"}))
     shutil.copy(Path(__file__).resolve(), OUT / "build.py")
     print("built", OUT)
